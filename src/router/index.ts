@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import UsersPage from "../views/UsersPage.vue";
+import CommentsView from "../views/CommentsView.vue";
+import PostsView from "../views/PostsView.vue";
+import UserSingleView from "../views/UserSingleView.vue";
+import SinglePost from "../views/SinglePost.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -7,6 +12,37 @@ const routes: Array<RouteRecordRaw> = [
     name: "home",
     component: HomeView,
   },
+
+  {
+    path: "/users",
+    name: "users",
+    component: UsersPage,
+  },
+
+  {
+    path: "/user/:id",
+    name: "userSingle",
+    component: UserSingleView,
+  },
+
+  {
+    path: "/comments",
+    name: "comments",
+    component: CommentsView,
+  },
+
+  {
+    path: "/posts",
+    name: "posts",
+    component: PostsView,
+  },
+
+  {
+    path: "/post/:id",
+    name: "SinglePost",
+    component: SinglePost,
+  },
+
   {
     path: "/about",
     name: "about",
